@@ -1,0 +1,36 @@
+QUESTION: What do you value most in a potential friend?
+ANSWER0: Loyalty
+ANSWER1: Status
+ANSWER2: Good times
+ANSWER3: Shared goals
+
+QUESTION: Which of these people do you admire the most?
+ANSWER0: Harriet Tubman
+ANSWER1: Jeff Bezos
+ANSWER2: Marilyn Monroe
+ANSWER3: Genghis Khan
+
+QUESTION: Which of these sounds like the most appealing dinner?
+ANSWER0: I am eating nothing because I am on a hunger strike
+ANSWER1: Lobster, caviar and the most expensive bottle of wine
+ANSWER2: Anything that goes well with beer
+ANSWER3: Hot and spicy curry
+
+QUESTION: Assuming it were possible, which animal would you most like to own as a pet?
+ANSWER0: Hedwig
+ANSWER1: Golden goose
+ANSWER2: Silverback gorilla
+ANSWER3: Tyrannosaurus Rex
+
+QUESTION: How would you most likely respond to a traumatic event?
+ANSWER0: Dress up in a spandex suit and beat up criminals
+ANSWER1: Build an unlikely team of contenders and shock the baseball world
+ANSWER2: Commandeer a ship and go searching for the Black Pearl
+ANSWER3: Create a park full of genetically engineered dinosaurs
+
+QUESTION: Which Danny Devito character do you most identify with?
+ANSWER0: The Lorax, The Lorax
+ANSWER1: Phil, Hercules
+ANSWER2: Frank Reynolds, It’s Always Sunny In Philadelphia
+ANSWER3: The Penguin, Batman Returns
+
