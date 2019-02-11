@@ -51,6 +51,8 @@ public class CalculateResults {
             }
         }
         int maxValueInMap = (Collections.max(freq.values()));
+        // when assigning getHouseName() or getHouseDescription() it throws up a 
+        // No such element inspection on this line. i guess it's empty
         for (Entry<String, Integer> entry : freq.entrySet()){
             if (entry.getValue()==maxValueInMap){
                 return entry.getKey();

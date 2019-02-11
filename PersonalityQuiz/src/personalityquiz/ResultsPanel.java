@@ -22,14 +22,14 @@ public class ResultsPanel extends JPanel{
         JPanel panel = new JPanel(new GridLayout(0, 1));
         panel.setBorder(BorderFactory.createEmptyBorder(3, 3, 3, 3));
         panel.setBorder(BorderFactory.createLineBorder(Color.RED));
-      //  panel.add(new JLabel("no"));
+        panel.add(new JLabel("no"));
       //  this does not throw up an error
-        panel.add(new JLabel(results.getHouseName()));
+      //  panel.add(new JLabel(results.getHouseName()));
       // this throws up an error
         JPanel rPanel = new JPanel(layout);
-      //  rPanel.add(new JLabel("nop"));
+        rPanel.add(new JLabel("nop"));
       //  this does not throw up an error
-        rPanel.add(new JLabel(results.getHouseDescription()));
+      //  rPanel.add(new JLabel(results.getHouseDescription()));
       // this throws up an error
         panel.add(rPanel);
         add(panel);

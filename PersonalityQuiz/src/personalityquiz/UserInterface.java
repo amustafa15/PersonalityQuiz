@@ -58,25 +58,25 @@ public class UserInterface extends JPanel {
         JButton navButton = new JButton("Next");
         navButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent evt) {
-//  
+            public void actionPerformed(ActionEvent evt) {  
                 if (evt.getActionCommand().equals("Next")) {
                     currentCard++;
                     if (currentCard == container.questionsLength() - 1) {
                         ((JButton) evt.getSource()).setText("Get results");
-
                     }
                     cardLayout.next(centerPanel);
                 } 
                 else {
                         System.out.println(calculate.returnScores());
                         System.out.println(calculate.calculateAnswers());
+                        // to test that they're being recorded correctly. they are
                     try {
                         System.out.println(calculate.getHouseName());
                         System.out.println(calculate.getHouseDescription());
+                        // the right answers are getting printed here but not to the 
+                        // JLabels in the ResultsContainer class
                         switchPanels(resultsPanel);
-//                        resultsPanel.add(new ResultsPanel());
-//                        cardLayout.next(resultsPanel);
+                        
                     } catch (FileNotFoundException ex) {
                         Logger.getLogger(UserInterface.class.getName()).log(Level.SEVERE, null, ex);
                     }  
@@ -98,7 +98,7 @@ public class UserInterface extends JPanel {
         panel.add(rPanel);
         return panel;
     }
-    // trying this instead of the ResultsPanel() class. same result. 
+    // tried this instead of the ResultsPanel() class. same result. 
     
     private JPanel createQPanel(Questions question) {
         JPanel radioPanel = new JPanel(new GridLayout(0, 1));
