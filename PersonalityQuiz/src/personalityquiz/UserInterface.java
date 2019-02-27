@@ -69,12 +69,9 @@ public class UserInterface extends JPanel {
                 else {
                         System.out.println(calculate.returnScores());
                         System.out.println(calculate.calculateAnswers());
-                        // to test that they're being recorded correctly. they are
                     try {
                         System.out.println(calculate.getHouseName());
                         System.out.println(calculate.getHouseDescription());
-                        // the right answers are getting printed here but not to the 
-                        // JLabels in the ResultsContainer class
                         switchPanels(resultsPanel);
                         
                     } catch (FileNotFoundException ex) {
@@ -92,13 +89,10 @@ public class UserInterface extends JPanel {
     private JPanel createResultsPanel() throws FileNotFoundException{
         JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createLineBorder(Color.RED));
-    //    panel.add(new JLabel(calculate.getHouseName()));
         JPanel rPanel = new JPanel(new BorderLayout());
-    //    rPanel.add(new JLabel(calculate.getHouseDescription()));
         panel.add(rPanel);
         return panel;
     }
-    // tried this instead of the ResultsPanel() class. same result. 
     
     private JPanel createQPanel(Questions question) {
         JPanel radioPanel = new JPanel(new GridLayout(0, 1));
@@ -121,6 +115,7 @@ public class UserInterface extends JPanel {
                 }
                 }
             });
+
             
             buttonGroup.add(answerButton);
 
@@ -137,17 +132,15 @@ public class UserInterface extends JPanel {
     }
     public void switchPanels(JPanel panel) throws FileNotFoundException{
         centerPanel.removeAll();
-        centerPanel.add(new ResultsPanel());
+        centerPanel.add(new ResultsPanel(calculate));
         centerPanel.repaint();
         centerPanel.validate();
     }
     public static void createAndShowGui() throws FileNotFoundException {
 
         UserInterface mainPanel = new UserInterface(new QuestionsContainer());
-        ResultsPanel rPanel = new ResultsPanel();
         CardLayout layouts = new CardLayout();
         JPanel p = new JPanel();
-        p.add(rPanel);
         p.setVisible(true);
         JFrame frame = new JFrame("User Interface");
         frame.setLayout(layouts);
@@ -155,12 +148,9 @@ public class UserInterface extends JPanel {
         frame.getContentPane().add(p);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-    //    layouts.show(frame.getContentPane(), "Results");
         frame.pack();
         frame.setLocationRelativeTo(null);
         
         frame.setVisible(true);
     }
 }
-
-
